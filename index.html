@@ -1,0 +1,103 @@
+<!--
+- Credits Song-
+alert song is from J.Geco - Chicken Song (https://www.youtube.com/watch?v=msSc7Mv0QHY)
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="view-port" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../img/hourglass/hourglass-0.png" type="image/png">
+    <link rel="stylesheet" href="timer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Timer</title>
+</head>
+
+<body>
+    <div class="big-container row">
+        <div class="nav col-12">
+            <a href="#" class="col-4">Alarm</a>
+            <a href="#" class="col-4" style="background-color: rgb(68, 50, 102)">Stopwatch</a>
+            <a href="#" class="col-4">Timer</a>
+        </div>
+        <div class="container col-12">
+            
+            <div class="stopwatch">
+                <div class="main col-12">
+                    <div class="head">
+                        <div class="pp">
+                            <div class="loading col-12"></div>
+                            <i class="fa fa-play-circle fa-3x"></i>
+                        </div>
+                        <div class="timer">00:00:00:00</div>
+                    </div>
+                    <div class="icn-btn fc" style="display: none;">
+                        <i class="fa fa-undo fa-2x"></i>
+                        <i class="fa fa-edit fa-2x"></i>
+                        <i class="fa fa-trash fa-2x"></i>
+                    </div>
+                </div>
+                <div class="history col-12" style="display: none;">
+                    <h1 class="ft">Catatan</h1>
+                    <div class="con-add">
+                        <ol></ol>
+                    </div>
+                </div>
+            </div>
+
+            <div class="main col-12 tm" style="position: relative; display: none;">
+                <div class="head">
+                    <div class="pp">
+                        <div class="loading col-12"></div>
+                        <i class="fa fa-play-circle fa-3x"></i>
+                    </div>
+                    <div class="timer ctr">
+                        <input type="number" name="hours" id="" value="00" placeholder="H">:
+                        <input type="number" name="min" id="" value="00" placeholder="M">:
+                        <input type="number" name="sec" id="" value="00" placeholder="S">
+                    </div>
+                </div>
+                <div class="opt fc" style="display: none;">
+                    <div class="ctr">
+                        <input type="text" size="5" placeholder="Label" maxlength="20">
+                        <span class="start-at"></span>
+                    </div>
+                    <div class="icn-btn">
+                        <i class="fa fa-repeat fa-2x"></i>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="main col-12 alarm" style="position: relative; display: none;">
+                <div class="head">
+                    <div class="pp">
+                        <h2>Off</h2>
+                        <div class="track">
+                            <div class="thumb"></div>
+                        </div>
+                    </div>
+                    <div class="timer ctr">
+                        <input type="number" name="hours" id="hAlrm" value="00" placeholder="H">:
+                        <input type="number" name="min" id="mAlrm" value="00" placeholder="M">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="alert" style="display: none;">
+                <h2 class="fade">Eaaaa</h2>
+                <span class="start-at" id='tmLabel'></span>
+                <span class="start-at" id='tmTime'></span>
+                <div></div>
+                <div class="close">Oke</div>
+            </div>
+        </div>
+    </div>
+    <a class="src" href="https://www.youtube.com/watch?v=msSc7Mv0QHY" target="_blank">Alert Song</a>
+    <audio src loop autoplay>
+        Your browser does not support the audio element.
+    </audio>
+    <script src="timer.js"></script>
+</body>
+
+</html>

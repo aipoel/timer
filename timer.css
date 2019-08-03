@@ -1,0 +1,79 @@
+html, body{height: 100%; margin: 0;}
+.fa, .loading, .close, .track{cursor: pointer;}
+body{display: flex; justify-content: center; align-items: center; background-color: #fff; font-family: monospace; text-align: center;}
+li, input, .timer, .fa-remove, .start-at{font-size: 24px;}
+a{text-decoration: none; padding: 5px 0; color: #C3C3E5; border: 5px solid transparent; font-size: 18px;}
+li{width: 50%;}
+input{background-color: transparent; border: none; color: #F1F0FF;}
+.history input[type=text], li, .fa-remove{box-sizing: border-box; float: left;}
+.history input[type=text]{border-right: 8px solid transparent; width: 47%;}
+input:focus{outline: none;}
+input[type=text]::placeholder{color: #443266;}
+input[type=number]::-webkit-outer-spin-button, input[type=number]::-webkit-inner-spin-button{-webkit-appearance: none; margin: 0;}
+input[type=number]{-moz-appearance: textfield;}
+input[type=number]{width: 8%; text-align: center; float: left; border: none; border-bottom: 1px solid transparent;}
+input[type=number]:hover{border-bottom: 1px solid #FFF;}
+.icn-btn > i, .pp > i, .head{margin: 10px;}
+.history > h1{border-bottom: 2px solid #C3C3E5;}
+input[placeholder=Label], .start-at{margin: 0 5px; font-size: 16px;}
+input[placeholder=Label]::placeholder{color: #8C489F;}
+.track, .thumb{height: 25px; border-radius: 33px;}
+.track{width: 50px; background-color: #424242; position: relative; margin-bottom: 10px;}
+.thumb{width: 25px; background-color: #C3C3E5; position: absolute; left: 0; transition: left .3s ease-out;}
+.on{background-color: #8C489F; left: 25px;}
+
+.fa-plus-circle{position: absolute; bottom: 0; right: 0;}
+.fa-remove{width: 3%; text-align: right; color: #443266;}
+.big-container{width: 456px; border-radius: 5px; box-shadow: 0px 3px 12px 0px rgba(0,0,0,0.5);}
+.container{background-color: #443266; color: #F1F0FF; padding: 25px; display: inline-block; position: relative;}
+.alert{position: absolute; background-color: #f1f0ff; color: #000; padding: 15px 25px; border-radius: 3px; top: 50%; left: 50%; transform: translate(-50%, -50%);}
+h2{margin-top: 0;}
+.close{padding: 8px 16px; margin: 15px 5px 0 5px; background-color: #8C489F; color: #fff; display: inline-block;}
+.history{text-align: left;}
+.pp{position: relative; display: inline-block;}
+.loading{position: absolute; border: 3px solid transparent; border-radius: 50%; height: 100%; top: 0; left: 0;}
+
+.con-add{height: auto; max-height: 190px; overflow-x: auto;}
+.con-add::-webkit-scrollbar{width: 8px;}
+.con-add::-webkit-scrollbar-track{background-color: #F1F0FF; border-radius: 10px;}
+.con-add::-webkit-scrollbar-thumb{background-color: #C3C3E5; border-radius: 10px;}
+
+.add{animation: fade-left .7s; transform-origin: left; padding: 5px; float: left;}
+.add:hover{background-color: #8C489F;}
+.ctr{display: flex; justify-content: center;}
+.fade{animation: fade 1s infinite alternate;}
+@keyframes fade{from{opacity: 0;} to{opacity: 1;}}
+@keyframes fade-left{from{transform: scaleX(0);} to{transform: scaleX(1);}}
+.rotate{border: 3px solid #C3C3E5; border-top: 3px solid #8C489F; animation: loading 1s infinite;}
+@keyframes loading{
+    0%{transform: rotate(0deg) scaleX(1.11);}
+    100%{transform: rotate(360deg) scaleX(1.11);}
+}
+.fc{animation: fade-center .5s;}
+@keyframes fade-center{from{transform: scaleX(0);} to{transform: scaleX(1);}}
+.ft{transform-origin: top; animation: fade-top .7s;}
+@keyframes fade-top{from{transform: scaleY(0);} to{transform: scaleY(1);}}
+.anim{animation: tb .5s infinite alternate;}
+@keyframes tb{from{margin-top: 0;} to{margin-top: 15px;}}
+
+@media only screen and(min-width: 1366px){
+    .big-container{width: 33.33%;}
+}
+/*Make a beauty navbar*/
+.nav {background-color: #8C489F; display: table;}
+.src{position: absolute; bottom: 0; right: 0; margin: 20px; color: #000;}
+/*Resposive*/
+.row::after{clear: both; content: ""; display: table;}
+[class*="col-"]{float: left; box-sizing: border-box;}
+.col-1{width: 8.33%;}
+.col-2{width: 16.67%;}
+.col-3{width: 25.00%;}
+.col-4{width: 33.33%;}
+.col-5{width: 41.67%;}
+.col-6{width: 50.00%;}
+.col-7{width: 58.33%;}
+.col-8{width: 66.67%;}
+.col-9{width: 75.00%;}
+.col-10{width: 83.33%;}
+.col-11{width: 91.67%;}
+.col-12{width: 100.00%;}
